@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel - Activity List Application</title>
+    <title>Laravel - Book Store Application</title>
     {{-- CSS --}}
     <link href="{{ asset('css/jquery-ui.css') }}" rel="stylesheet">
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />-->
@@ -111,7 +111,7 @@
                     var id = $(this).closest('li').find('.itemId').val();
                     $.post('delete', {'id': id,'_token':$('input[name=_token]').val()}, function(data) {
                         $('#items').load(location.href + ' #items');
-                       window.location.reload();
+                        window.location.reload();
                     });
                 }        
             });         
